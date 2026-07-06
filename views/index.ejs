@@ -2,9 +2,26 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title><%= title %></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pinboard</title>
+  <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-  <h1>Hello from coderabbit-test</h1>
+  <header>
+    <h1>Pinboard</h1>
+    <p class="subtitle">A tiny scratchpad for quick thoughts</p>
+  </header>
+
+  <main>
+    <form id="note-form">
+      <input type="text" id="title" placeholder="Title" required autocomplete="off">
+      <textarea id="content" placeholder="Write something..." rows="3" required></textarea>
+      <button type="submit">Pin it</button>
+    </form>
+
+    <div id="notes-grid"></div>
+  </main>
+
+  <script src="/app.js"></script>
 </body>
 </html>
